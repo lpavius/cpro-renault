@@ -16,24 +16,24 @@ __Janvier 2020, Mars 2020__
 
 ---
 
-## [Exercices en ES6+](./es6)
+## [Exercices en ES6+](./exercices/es6)
 
-* [Variables](./es6/Variables)
-* [Chaînes et gabarits de littéraux](./es6/Chaînes%20et%20gabarits%20de%20littéraux)
-* [Améliorations de Tableaux](./es6/Améliorations%20de%20Tableaux)
-* [Améliorations de fonctions](./es6/Améliorations%20de%20fonctions)
-* [Améliorations d'objets](./es6/Améliorations%20d'objets)
-* [Map, WeakMap, Set, WeakSet](./es6/Map,%20WeakMap,%20Set,%20WeakSet)
-* [Classes](./es6/Classes)
-* [Promesses et fonctions asynchrones](./es6/Promesses%20et%20fonctions%20asynchrones)
-
----
-
-## [Exercices sur les Modules](./modules)
+* [Variables](./exercices/es6/Variables)
+* [Chaînes et gabarits de littéraux](./exercices/es6/Chaînes%20et%20gabarits%20de%20littéraux)
+* [Améliorations de Tableaux](./exercices/es6/Améliorations%20de%20Tableaux)
+* [Améliorations de fonctions](./exercices/es6/Améliorations%20de%20fonctions)
+* [Améliorations d'objets](./exercices/es6/Améliorations%20d'objets)
+* [Map, WeakMap, Set, WeakSet](./esexercices/es6/Map,%20WeakMap,%20Set,%20WeakSet)
+* [Classes](./exercices/es6/Classes)
+* [Promesses et fonctions asynchrones](./exercices/es6/Promesses%20et%20fonctions%20asynchrones)
 
 ---
 
-## [Exercices en TypeScript](./typescript)
+## [Exercices sur les Modules](./exercices/modules)
+
+---
+
+## [Exercices en TypeScript](./exercices/typescript)
 
 ---
 
