@@ -23,7 +23,7 @@ __Janvier 2020, Mars 2020__
 * [Améliorations de Tableaux](./exercices/es6/Améliorations%20de%20Tableaux)
 * [Améliorations de fonctions](./exercices/es6/Améliorations%20de%20fonctions)
 * [Améliorations d'objets](./exercices/es6/Améliorations%20d'objets)
-* [Map, WeakMap, Set, WeakSet](./esexercices/es6/Map,%20WeakMap,%20Set,%20WeakSet)
+* [Map, WeakMap, Set, WeakSet](./exercices/es6/Map,%20WeakMap,%20Set,%20WeakSet)
 * [Classes](./exercices/es6/Classes)
 * [Promesses et fonctions asynchrones](./exercices/es6/Promesses%20et%20fonctions%20asynchrones)
 
@@ -40,7 +40,7 @@ __Janvier 2020, Mars 2020__
 ## [Projet à réaliser en TypeScript](./projet)
 
 * [Sujet](./projet/Cahier%20des%20Charges.pdf)
-* [Données](./projet/distances/json)
+* [Données](./projet/distances/formats/json)
     * __Attention__ : Le jeu de données ne contient pas l'information concernant les *villes voisines*. Vous devez ajouter cette information sous la forme d'une propriété booléenne `estVoisine` par exemple pour chaque ville.
 
 ---

@@ -11,7 +11,7 @@ __Février 2020, Mars 2020__
 
 ---
 
-## [Exercices avec XmlHttpRequest et Fetch](./vanilla/exercices)
+## [Exercices avec XmlHttpRequest et Fetch](./exercices/natif/exercices)
 
 Exemples :
 
