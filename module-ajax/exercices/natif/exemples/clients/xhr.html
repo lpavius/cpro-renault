@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Requête GET Asynchrone</title>
+  <script>
+    window.addEventListener("DOMContentLoaded", function(){
+      const zone = window.document.getElementById("la-personne-selectionnee");
+      const tousLesSelect = window.document.getElementsByTagName("select");
+      tousLesSelect[0].addEventListener("change", function(){
+        const selection = tousLesSelect[0].options[tousLesSelect[0].selectedIndex].value;
+        if (isNaN(selection)) {
+          zone.innerHTML = "Pas de personnes séléctionnée."
+        } else {
+          const xhr = new XMLHttpRequest();
+          const url = `http://172.32.66.235:8080/person?id=${selection}`;
+          const methode = "GET";
+          xhr.open(methode, url);
+          xhr.send();
+          xhr.addEventListener("load", function(){
+            let objet = JSON.parse(xhr.responseText);
+            if ("OK" === objet.status ) {
+              zone.innerHTML = `${objet.data.firstname} ${objet.data.lastname} à ${objet.data.age} ans.`;
+            }
+          });
+        }
+      });
+
+      const tousLesForm = window.document.getElementsByTagName("form");
+      tousLesForm[0].addEventListener("submit", function(submitEvent){
+        submitEvent.preventDefault();
+        const tousLesInput = window.document.getElementsByTagName("input");
+        const firstname = tousLesInput[0].value;
+        const lastname = tousLesInput[1].value;
+        const age = tousLesInput[2].value;
+
+        const queryString = `firstname=${firstname}&lastname=${lastname}&age=${age}`;
+        const url = `http://172.32.66.235:8080/person`;
+        const method = "POST";
+
+        const xhr = new XMLHttpRequest();
+        xhr.open(method, url);
+        xhr.send(queryString);
+
+        xhr.addEventListener("load", function(){
+          const objet = JSON.parse(xhr.responseText);
+          if ("OK" === objet.status) {
+            window.alert("Sauvegardé !");
+          }
+        })
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Requête GET Asynchrone avec XHR</h1>
+  <p>Choisissez une personne :</p>
+  <select>
+    <option value="-">-- Pas de personne selectionnée --</option>
+    <option value="0">Personne 1</option>
+    <option value="1">Personne 2</option>
+    <option value="2">Personne 3</option>
+  </select>
+  <div id="la-personne-selectionnee"></div>
+  <h1>Requête POST Asynchrone avec XHR</h1>
+  <form>
+    <p>prenom : <input type="text" name="firstname"/></p>
+    <p>nom : <input type="text" name="lastname"/></p>
+    <p>age : <input type="number" name="age"/></p>
+    <p><input type="submit" value="Enregistrer"/></p>
+  </form>
+</body>
+</html>

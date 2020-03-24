@@ -1,0 +1,11 @@
+{
+  "name": "vanilla-rest-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "vanilla-rest-server-1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sami Radi <sami.radi@virtuoworks.com> (http://www.virtuoworks.com)",
+  "license": "VirtuoWorks® - tous droits réservés©"
+}

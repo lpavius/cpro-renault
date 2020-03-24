@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Requête GET Asynchrone</title>
+  <script>
+    window.addEventListener("DOMContentLoaded", function(){
+      const zoneDeMiseAJour = window.document.getElementById("la-personne-selectionnee");
+      const HTMLSelectElements = window.document.getElementsByTagName("select");
+      HTMLSelectElements[0].addEventListener("change", function() {
+        console.log("Change detected !");
+        const selectedValue = this.options[this.options.selectedIndex].value;
+        if (!isNaN(selectedValue)) {
+          const unePromesse = fetch(`http://172.32.66.235:8080/person?id=${selectedValue}`, {
+            method: "GET"
+          });
+
+          const lAutrePromesse = unePromesse.then(function(response){
+            const unAutrePromesse = response.json();
+            return unAutrePromesse;
+          });
+
+          lAutrePromesse.then(function(person){
+            console.log(person.data);
+            zoneDeMiseAJour.innerHTML = `<p>${person.data.firstname} ${person.data.lastname} à ${person.data.age} ans.</p>`;
+          });
+        } else {
+          zoneDeMiseAJour.innerHTML = "";
+        }
+      });
+
+      const HTMLFormElement = window.document.getElementsByTagName("form")[0];
+      HTMLFormElement.addEventListener("submit", function(submitEvent){
+        submitEvent.preventDefault();
+        const HTMLInputElements = window.document.getElementsByTagName("input");
+        const firstname = HTMLInputElements[0].value;
+        const lastname = HTMLInputElements[1].value;
+        const age = HTMLInputElements[2].value;
+        const unePromesse = fetch(`http://172.32.66.235:8080/person`, {
+          method: "POST",
+          body: `firstname=${firstname}&lastname=${lastname}&age=${age}`
+        });
+
+        unePromesse.then(function(response){
+          const autrePromesse = response.json();
+          autrePromesse.then(function(resultat){
+            if ("OK" === resultat.status) {
+              const HTMLOptionElement = window.document.createElement("option");
+              HTMLOptionElement.value = HTMLSelectElements[0].options.length - 1
+              HTMLOptionElement.innerHTML = `Personne ${parseInt(HTMLOptionElement.value) + 1}`;
+              HTMLSelectElements[0].appendChild(HTMLOptionElement);
+            }
+          })
+        });
+
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>Requête GET Asynchrone avec Fetch</h1>
+  <p>Choisissez une personne :</p>
+  <select>
+    <option value="-">-- Pas de personne selectionnée --</option>
+    <option value="0">Personne 1</option>
+    <option value="1">Personne 2</option>
+    <option value="2">Personne 3</option>
+  </select>
+  <div id="la-personne-selectionnee"></div>
+  <h1>Requête POST Asynchrone Fetch</h1>
+  <form>
+    <p>prenom : <input type="text" name="firstname"/></p>
+    <p>nom : <input type="text" name="lastname"/></p>
+    <p>age : <input type="number" name="age"/></p>
+    <p><input type="submit" value="Enregistrer"/></p>
+  </form>
+</body>
+</html>

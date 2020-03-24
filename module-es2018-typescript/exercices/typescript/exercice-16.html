@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <title>TypeScript : Exercice 16</title>
+    <!---------------------------------
+    -----------PRÉSENTATION-----------
+    ----------------------------------
+      Trois mots clefs (public, private et protected) introduits par TypeScript
+      permettent de définir et limiter la portée d'usage des propriétés au sein
+      d'une classe.
+
+      Les propriétés et méthodes déclarées à l'aide du mot-clef 'public' sont
+      utilisables dans la classe, la(les) classe enfant(s) et depuis l'extérieur
+      des classes. C'est le comportement par défaut appliqué aux propriétés pour
+      lesquelles rien n'est précisé.
+
+      Les propriétés et méthodes déclarées à l'aide du mot-clef 'private' ne
+      sont utilisables qu'à partir de l'intérieur d'une classe (de son
+      constructeur ou de ses méthodes).
+
+      Les propriétés et méthodes 'protected' sont utilisables dans une classe et
+      dans la(les) classes enfant(s); mais ne sont pas accessible depuis
+      l'extérieur de la classe.
+
+      On utilisera de préférence ces mots-clef du plus restrictif au moins
+      restrictif. A Savoir 'private' puis 'protected' et enfin 'public'.
+
+      Attention, les interfaces ne décrivent que les propriétés et méthodes
+      'public' des objets.
+
+      ===ts_code==================================
+        class Exemple {
+          private donnee: string;
+          protected etat: boolean;
+          public niveau: number;
+        }
+      ============================================
+
+    ----------------------------------
+    -------------EXERCICE-------------
+    ----------------------------------
+      - Reprenez le code de l'exercice précédent ;
+      - Définissez la portée de chaque propriété et méthode.
+    -->
+</head>
+<body>
+  <h1>TypeScript : Exercice 16</h1>
+  <p>Un paragraphe</p>
+  <noscript>
+    <p>VirtuoWorks® - tous droits réservés©</p>
+  </noscript>
+</body>
+</html>
