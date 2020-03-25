@@ -17,7 +17,9 @@ Exemples :
 
 * [Clients XHR et Fetch](./exercices/natif/exemples/clients)
 * [Serveur basé sur Node](./exercices/natif/exemples/serveur-natif)
-* [Serveur basé sur Express](./exercices/natif/exemples/serveur-express)
+  * *Sans base de données*.
+* [Serveur basé sur Express/PgSQL](./exercices/natif/exemples/serveur-express)
+  * *Vous avez besoin d'une base de données pour le faire fonctionner*.
 
 Objectif : Comprendre la méthode AJAX
 

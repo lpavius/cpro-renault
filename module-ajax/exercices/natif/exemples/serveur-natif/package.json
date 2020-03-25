@@ -2,7 +2,7 @@
   "name": "vanilla-rest-server",
   "version": "1.0.0",
   "description": "",
-  "main": "vanilla-rest-server-1.js",
+  "main": "vanilla-rest-server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

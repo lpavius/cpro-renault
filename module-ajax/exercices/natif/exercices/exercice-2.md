@@ -8,7 +8,8 @@ Vous utiliserez l'API JavaScript native Fetch pour effectuer exactement le même
 
 *Vous pouvez vous aider de l'[exemple de client réalisé avec l'API Fetch](../exemples/clients/fetch.html) fourni. Pensez à adapter l'exemple à votre environnement, en particulier l'adresse IP de l'hôte.*
 
-*Vous pouvez également consulter un exemple de [serveur REST basé sur Node JS (en pur natif) ici](../exemples/serveur/vanilla-rest-server-1.js) (attention, pour les requêtes HTTP POST, il attend des données sous forme de query string)*
+*Vous pouvez également consulter un exemple de [serveur REST basé sur Node JS (en pur natif) ici](../exemples/serveur-natif/vanilla-rest-server.js) (attention, pour les requêtes HTTP POST, il attend des données sous forme de query string) ou un exemple de [serveur REST basé sur Express JS ici](../exemples/serveur-express/express-rest-server.js) (pour les requêtes HTTP POST, il attend des données sous forme de json, attention, vous avez besoin d'une base de données)*
+
 
 ---
 
