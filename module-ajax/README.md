@@ -16,7 +16,8 @@ __Février 2020, Mars 2020__
 Exemples :
 
 * [Clients XHR et Fetch](./exercices/natif/exemples/clients)
-* [Serveur basé sur Node](./exercices/natif/exemples/serveur)
+* [Serveur basé sur Node](./exercices/natif/exemples/serveur-natif)
+* [Serveur basé sur Express](./exercices/natif/exemples/serveur-express)
 
 Objectif : Comprendre la méthode AJAX
 
