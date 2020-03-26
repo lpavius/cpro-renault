@@ -40,7 +40,7 @@
 
 ---
 
-### [Module ES2018/TypeScript](./module-es2018-typescript)
+### (__NEW__ !) [Module ES2018/TypeScript](./module-es2018-typescript)
 
 *(En Cours..)* __Janvier 2020, Février 2020, Mars 2020__
 
