@@ -16,13 +16,13 @@
           const url = `http://172.32.66.235:8080/person?id=${selection}`;
           const methode = "GET";
           xhr.open(methode, url);
-          xhr.send();
           xhr.addEventListener("load", function(){
             let objet = JSON.parse(xhr.responseText);
             if ("OK" === objet.status ) {
               zone.innerHTML = `${objet.data.firstname} ${objet.data.lastname} à ${objet.data.age} ans.`;
             }
           });
+          xhr.send();
         }
       });
 

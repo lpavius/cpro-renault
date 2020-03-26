@@ -29,7 +29,7 @@ __Janvier 2020, Mars 2020__
 
 ---
 
-## [Exercices sur les Modules](./exercices/modules)
+## (__NEW__) [Exercices sur les Modules](./exercices/modules)
 
 ---
 
